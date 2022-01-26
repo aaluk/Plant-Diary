@@ -1,0 +1,2 @@
+class PlantEvent < ApplicationRecord
+end

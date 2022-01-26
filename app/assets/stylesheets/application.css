@@ -1,0 +1,345 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  text-align: center;
+  background-color: rgba(245, 255, 232, 1);
+}
+
+.App-link {
+  color: #61dafb;
+}
+/*
+-------------------------------------
+MENU BAR
+-------------------------------------
+*/
+
+.menuBar {
+  background-color: rgba(168, 209, 80, 1);
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+  padding: 5px;
+}
+
+i {
+  padding: 10px;
+}
+
+/*
+-------------------------------------
+Container
+-------------------------------------
+*/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.myPlants, .calendarListContainer {
+  width: 65%;
+  min-width: 1000px;
+  margin: 5px;
+}
+/*
+------------------------------------
+Plant Carousel
+------------------------------------
+*/
+.myPlants {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50%;
+  margin-bottom: 20px;
+}
+
+.myPlantHeader {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  font-size: 25px;
+}
+
+.BigCardContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flip-card {
+  background-color: transparent;
+  height: 220px;
+  width: 170px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position:relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.card, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card {
+  height: 220px;
+  width: 170px;
+  background-color: white;
+  border-radius: 10px;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-back {
+  height: 200px;
+  width: 150px;
+  background-color: white;
+  border-radius: 10px;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+  overflow: hidden;
+  display:flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-between;
+  transform: rotateY(180deg);
+  text-align: left;
+}
+
+.card-back p {
+  font-size: 13px;
+  margin: 2px;
+}
+
+.card img {
+  min-width: 170px;
+  max-width: 190px;
+  min-height: 220px;
+  object-fit: cover;
+}
+
+.card-back button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color:rgba(245, 255, 232, 1);
+  border: 0.5px solid rgba(168, 209, 80, 1);
+  border-radius: 5px;
+}
+
+.card-back button:hover {
+  background-color:rgba(168, 209, 80, 1);
+  border: 0.5px solid rgba(168, 209, 80, 1);
+}
+
+.arrow, .unselectedArrow {
+  height: 40px;
+}
+
+.unselectedArrow {
+  opacity: 0.2;
+}
+/*
+-----------------------------------
+Calender + List
+-----------------------------------
+*/
+.calendarListContainer {
+  height: 700px;
+}
+
+.calendarHeader {
+  font-size: 25px;
+  text-align: left;
+  padding: 10px;
+}
+.calendarList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendar {
+  height: 500px;
+  width: 800px;
+  background-color: white;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+  margin: 5px;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.choreList {
+  margin: 5px;
+  height: 490px;
+  min-height: 470px;
+  padding: 15px;
+  width: 23%;
+  background-color: white;
+  border-radius: 10px;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+  overflow: scroll;
+}
+
+.plantChore {
+  background-color: rgba(168, 209, 80, 1);
+  padding: 10px;
+  border-radius: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.plantChoreDone {
+  background-color: rgb(218, 238, 192);
+  padding: 10px;
+  border-radius: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.choreheader {
+  margin: 0;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+.day {
+  min-height: 70px;
+  padding: 5px;
+  border-top: 0.5px solid rgba(168, 209, 80, 1);
+}
+
+/*
+------------------------
+New Plant Form
+------------------------
+*/
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.form {
+  background-color: white;
+  margin: 10% auto;
+  padding: 15px;
+  border: 1px solid black;
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.closeButton {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-align: right;
+  color: grey;
+}
+
+.form label {
+  display: block;
+  font-size: 16px;
+  margin: 0;
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.text {
+  padding: 7px;
+  border-radius: 5px;
+  border: 0.5px solid grey;
+  width: 90%;
+}
+
+.number {
+  width: 30px;
+}
+.normalButton {
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  width: 100%;
+  background-color:rgba(245, 255, 232, 1);
+  border: 0.5px solid rgba(168, 209, 80, 1);
+  border-radius: 5px;
+}
+.submitButton {
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  width: 100%;
+  background-color:rgba(245, 255, 232, 1);
+  border: 0.5px solid rgba(168, 209, 80, 1);
+  border-radius: 5px;
+}
+
+.submitButton:hover {
+  background-color:rgba(168, 209, 80, 1);
+  border: 0.5px solid rgba(168, 209, 80, 1);
+}
+
+.formHeader {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

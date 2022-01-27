@@ -40,7 +40,7 @@ function App() {
           {plants ? <PlantCarousel updatePlants={updatePlants} plants={plants}/> : null}
         </div>
         <div className="calendarListContainer">
-          <div className="calendarHeader">My Chores</div>
+          <div className="calendarHeader title"><i className="far fa-calendar-alt"></i>My Chores</div>
           <div className="calendarList">
             {events ? <MyCalendar plants={events}/> : null}
             {events ? <ChoreList updatePlants={updatePlants} plants={events}/> : null}

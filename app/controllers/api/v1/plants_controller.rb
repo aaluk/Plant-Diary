@@ -40,7 +40,9 @@ class Api::V1::PlantsController < ApplicationController
   #delete /plants/1
   def destroy
     @plant.destroy
-    @event = PlantEvent.find_by(name: params[:name]).destroy
+    @event = PlantEvent.where(name: params[:name]).find_each do |event|
+      event.destroy
+    end
     render json: { notice: 'Plant was successfully removed.'}
   end
 

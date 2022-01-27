@@ -8,8 +8,8 @@ function MyPlantHeader(props) {
   }
   return (
     <div className="myPlantHeader">
-      <div>
-        My Plants
+      <div className="title">
+      <i className="fab fa-pagelines"></i>My Plants
       </div>
       <i className="fas fa-plus" onClick={clickHandler}></i>
       {modal ? <NewPlant updatePlants={props.updatePlants} setModal={setModal}/> : null}

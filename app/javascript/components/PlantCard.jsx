@@ -15,7 +15,7 @@ function PlantCard ({plant}) {
             <p><b>Water Frequency: </b>Every {plant.waterFrequency} days</p>
             <p><b>Fertilize Frequency: </b> Every {plant.fertilizeFrequency} months</p>
           </div>
-          <button>Edit</button>
+          <button>Delete</button>
         </div>
 
       </div>

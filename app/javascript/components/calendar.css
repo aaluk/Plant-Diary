@@ -75,6 +75,7 @@ button.rbc-input::-moz-focus-inner {
   font-size: 90%;
   min-height: 0;
   border-bottom: 1px solid #ddd;
+  padding-top: 5px;
 }
 .rbc-header + .rbc-header {
   border-left: 1px solid #ddd;
@@ -130,6 +131,7 @@ button.rbc-input::-moz-focus-inner {
   flex-grow: 1;
   padding: 0 10px;
   text-align: center;
+  font-size:20px;
 }
 .rbc-toolbar button {
   color: #373a3c;
@@ -310,6 +312,7 @@ button.rbc-input::-moz-focus-inner {
   flex: 1 1 0;
   min-width: 0;
   padding-right: 5px;
+  padding-top: 5px;
   text-align: right;
 }
 .rbc-date-cell.rbc-now {

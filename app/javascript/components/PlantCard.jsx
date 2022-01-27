@@ -1,7 +1,15 @@
 import React from 'react';
+import axios from 'axios';
 
-function PlantCard ({plant}) {
+function PlantCard ({plant, updatePlants}) {
   const plantPhoto = plant.img || 'https://st4.depositphotos.com/33004860/39275/i/450/depositphotos_392750726-stock-photo-cartoon-green-plant-pot-houseplant.jpg'
+
+  const clickHandler = () => {
+    axios.delete(`/api/v1/plants/destroy?id=${plant.id}&name=${plant.name}&plantSpecies=${plant.plantSpecies}`)
+      .then(results => updatePlants())
+      .catch(err => console.log(err));
+  }
+
   return (
     <div className="flip-card">
       <div className="flip-card-inner">
@@ -15,7 +23,7 @@ function PlantCard ({plant}) {
             <p><b>Water Frequency: </b>Every {plant.waterFrequency} days</p>
             <p><b>Fertilize Frequency: </b> Every {plant.fertilizeFrequency} months</p>
           </div>
-          <button>Delete</button>
+          <button onClick={clickHandler}>Delete</button>
         </div>
 
       </div>

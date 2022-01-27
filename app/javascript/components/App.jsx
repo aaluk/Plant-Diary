@@ -37,7 +37,7 @@ function App() {
       <div className="container">
         <div className="myPlants">
           <MyPlantHeader updatePlants={updatePlants}/>
-          {plants ? <PlantCarousel plants={plants}/> : null}
+          {plants ? <PlantCarousel updatePlants={updatePlants} plants={plants}/> : null}
         </div>
         <div className="calendarListContainer">
           <div className="calendarHeader">My Chores</div>

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       post 'plants/create'
       post 'events/create'
       put 'events/update'
+      delete 'plants/destroy'
     end
   end
 

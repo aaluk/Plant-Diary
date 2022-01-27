@@ -4,5 +4,5 @@ Green Thumb Journal is a scheduling web application that allows plant lovers to 
 
 
 <p align="center">
-  <img alt="app demo" src="./lib/view.png">
+  <img alt="app demo" src="./lib/view1.png">
 </p>
